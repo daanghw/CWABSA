@@ -1,6 +1,7 @@
 '''
 This Program makes the BERT embedding matrix and test-/traindata, using the tokenisation for BERT
 First 'getBERTusingColab' should be used to compile the subfiles containing embeddings.
+  This might take a while, google colab using TPU can be used. Here this is done with multiple subfiles
 The new test-/traindata files contain original data, with every word unique and corresponding to vector in emb_matrix
 '''
 from config import *
