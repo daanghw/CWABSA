@@ -1,9 +1,11 @@
-#This code can be run using Google Colab, with TPU
-#In line 48, the model can be changed to base or large
+'''
+This code can be run using Google Colab, with TPU
+In line 48, the model can be changed to base or large
 
-# Code partially written by Andreas Poyiatzis: 
-# https://towardsdatascience.com/nlp-extract-contextualized-word-embeddings-from-bert-keras-tf-67ef29f60a7b
-# using BERT as written by Google Research: https://github.com/google-research/bert
+Code partially written by Andreas Poyiatzis: 
+https://towardsdatascience.com/nlp-extract-contextualized-word-embeddings-from-bert-keras-tf-67ef29f60a7b
+using BERT as written by Google Research: https://github.com/google-research/bert
+'''
 
 !rm -rf bert
 !git clone https://github.com/google-research/bert
