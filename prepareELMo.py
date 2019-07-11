@@ -4,7 +4,7 @@ from config import *
 from utils import load_w2v
 
 url = "https://tfhub.dev/google/elmo/2"
-local_url = "module_elmo"   #when hub saved as module_elmo
+local_url = "module_elmo"   #when hub saved as module_elmo, must be downloaded first
 elmo = hub.Module(url, trainable=False)
 
 #get ELMO embeddings for each word in each sentence, returns ndarray of shape (#sentences, sentence_length, dim_length)
