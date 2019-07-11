@@ -31,10 +31,10 @@ tf.app.flags.DEFINE_integer('max_target_len', 19, 'max target length')
 # traindata, testdata and embeddings, train path aangepast met ELMo
 tf.app.flags.DEFINE_string("train_path_ont", "data/programGeneratedData/300traindata"+str(FLAGS.year)+".txt", "train data path for ont")
 tf.app.flags.DEFINE_string("test_path_ont", "data/programGeneratedData/300testdata"+str(FLAGS.year)+".txt", "formatted test data path")
-tf.app.flags.DEFINE_string("train_path", "data/programGeneratedData/BERT"+str(FLAGS.embedding_dim)+'traindata'+str(FLAGS.year)+".txt", "train data path")
-tf.app.flags.DEFINE_string("test_path", "data/programGeneratedData/BERT"+str(FLAGS.embedding_dim)+'testdata'+str(FLAGS.year)+".txt", "formatted test data path")
-tf.app.flags.DEFINE_string("embedding_path", "data/programGeneratedData/" + str(FLAGS.embedding_type) +str(FLAGS.embedding_dim)+'embedding'+str(FLAGS.year)+".txt", "pre-trained glove vectors file path")
-tf.app.flags.DEFINE_string("remaining_test_path_ELMo", "data/programGeneratedData/"+str(FLAGS.embedding_dim)+'remainingtestdata'+str(FLAGS.year)+"ELMo.txt", "formatted remaining test data path after ontology")
+tf.app.flags.DEFINE_string("train_path", "data/programGeneratedData/" + str(FLAGS.embedding_type) +str(FLAGS.embedding_dim)+'traindata'+str(FLAGS.year)+".txt", "train data path")
+tf.app.flags.DEFINE_string("test_path", "data/programGeneratedData/" + str(FLAGS.embedding_type) + str(FLAGS.embedding_dim)+'testdata'+str(FLAGS.year)+".txt", "formatted test data path")
+tf.app.flags.DEFINE_string("embedding_path", "data/programGeneratedData/" + str(FLAGS.embedding_type) + str(FLAGS.embedding_dim)+'embedding'+str(FLAGS.year)+".txt", "pre-trained glove vectors file path")
+tf.app.flags.DEFINE_string("remaining_test_path_ELMo", "data/programGeneratedData/"+str(FLAGS.embedding_dim)+'remainingtestdata'+str(FLAGS.year)+"ELMo.txt", "only for printing")
 tf.app.flags.DEFINE_string("remaining_test_path", "data/programGeneratedData/"+str(FLAGS.embedding_dim)+'remainingtestdata'+str(FLAGS.year)+".txt", "formatted remaining test data path after ontology")
 
 #svm traindata, svm testdata
@@ -50,12 +50,7 @@ tf.app.flags.DEFINE_string("hyper_svm_train_path", "data/programGeneratedData/"+
 tf.app.flags.DEFINE_string("hyper_svm_eval_path", "data/programGeneratedData/"+str(FLAGS.embedding_dim)+'hyperevalsvmdata'+str(FLAGS.year)+".txt", "hyper eval svm data path")
 
 #external data sources
-tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/"+str(FLAGS.embedding_type)+"."+str(FLAGS.embedding_dim)+"d.txt", "pre-trained embedding vectors file path")
-#tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/"+str(FLAGS.embedding_type)+".42B."+str(FLAGS.embedding_dim)+"d.txt", "pre-trained embedding vectors file path")
-#tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/glove.42B."+str(FLAGS.embedding_dim)+"d.txt", "pre-trained glove vectors file path")
-#tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/GoogleNews-vectors-negative"+str(FLAGS.embedding_dim)+".txt", "pre-trained glove vectors file path")
-#tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/fasttext-crawl-"+str(FLAGS.embedding_dim)+"d-2M.txt", "pre-trained fasttext vectors file path")
-#tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/Word2vec-enwiki_20180420_"+str(FLAGS.embedding_dim)+"d.txt", "pre-trained word2ved vectors file path")
+tf.app.flags.DEFINE_string("pretrain_file", "data/externalData/"+str(FLAGS.embedding_type)+"."+str(FLAGS.embedding_dim)+"d.txt", "pre-trained embedding vectors for non BERT and ELMo")
 
 tf.app.flags.DEFINE_string("train_data", "data/externalData/restaurant_train_"+str(FLAGS.year)+".xml",
                     "train data path")
