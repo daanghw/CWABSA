@@ -21,9 +21,9 @@ import sys
 
 # main function
 def main(_):
-    loadData         = False        # only for non-contextualised word embeddings.
+    loadData         = True        # only for non-contextualised word embeddings.
                                     #   Use prepareBERT for BERT (and BERT_Large) and prepareELMo for ELMo
-    useOntology      = True         # When run together with runLCRROTALT, the two-step method is used
+    useOntology      = False         # When run together with runLCRROTALT, the two-step method is used
     runLCRROTALT     = True
 
     runSVM           = False
