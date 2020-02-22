@@ -1,4 +1,5 @@
 # CWABSA
+Github for: https://personal.eur.nl/frasincar/spool/icwe2020.pdf
 Code for (non-)Contextualised Word embedding techniques on a hybrid approach for Aspect-Based Sentiment Analysis. 
 
 All software is written in PYTHON3 (https://www.python.org/) and makes use of the TensorFlow framework (https://www.tensorflow.org/).
